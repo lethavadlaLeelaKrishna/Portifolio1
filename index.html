@@ -4,531 +4,306 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <title>Lethavadla Leela Krishna — Full Stack Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
 
-     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-<script>
-  var typed = new Typed("#typed-role", {
-    strings: [
-      "Full Stack Python Developer",
-      "Frontend Specialist",
-      "Backend Engineer",
-      "Tech Mentor & Trainer"
-    ],
-    typeSpeed: 40,
-    backSpeed: 20,
-    loop: true
-  });
-</script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+      var typed = new Typed("#typed-role", {
+        strings: [
+          "Full Stack Python Developer",
+          "Django &amp; REST API Builder",
+          "Backend Systems Engineer",
+          "Tech Mentor &amp; Trainer",
+        ],
+        typeSpeed: 40,
+        backSpeed: 20,
+        loop: true,
+      });
+    </script>
   </head>
   <body>
-    <nav id="desktop-nav">
-      <div class="logo">Lethavadla Leela Krishna</div>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Leela Krishna Lethavadla</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
-      </div>
-    </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="./assets/profile-pic.png" alt="John Doe profile picture" />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title"> Lethavadla Leela Krishna</h1>
-        <p class="section__text__p2">Full Stack Developer</p>
-        <div class="btn-container">
+    <div class="grain" aria-hidden="true"></div>
+
+    <div class="layout">
+      <header class="site-nav" id="site-nav">
+        <div class="site-nav__top">
+          <a href="#profile" class="mark">LLK</a>
           <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/resume-example.pdf')">
-            Download CV
+            class="hamburger-icon"
+            id="hamburger-icon"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+            onclick="toggleMenu()"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
           </button>
-          <button class="btn btn-color-1" onclick="location.href='https://github.com/lethavadlaLeelaKrishna/'" target="_blank">
-            Contact Info
-          </button>
         </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://www.linkedin.com/in/leela-krishna-lethavadla-b0145934b'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/lethavadlaLeelaKrishna/'"
-          />
-        </div>
-      </div>
-    </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="./assets/about-pic.png"
-            alt="Profile picture"
-            class="about-pic"
-          />
-        </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>1+ year <br />Full Stack Developer </p>
-            </div>
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>Bachelor Of Technology Degree<br/></p>
-            </div>
-          </div>
-          <div class="text-container">
-            <p>
-                I am a passionate Python Developer with hands-on experience in
-        Django, REST APIs, and database management systems. I enjoy
-        developing scalable and user-friendly web applications that solve
-        real-world problems. Skilled in backend development, CRUD operations,
-        and full-stack web technologies, I continuously improve my knowledge
-        in modern software development and problem-solving.
-            </p>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
-    </section>
-    <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML5</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS3</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>BootStrap</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>React JS</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-               
-              
-            </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Backend Development</h2>
-            <div class="article-container">
-              
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Python</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Django/Flask</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>MangoDB</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Git Version Controls</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Github</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>DbSqlite3</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Tools- VS-Code</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
-    </section>
-    <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/Todo.png"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Todo Project</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/Leelakrishna93/Todo'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://leelakrishna9090.pythonanywhere.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
 
-
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/Empdata.png"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Employee Project</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/Leelakrishna93/Employee.git'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://leelakrishna23.pythonanywhere.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-
-
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/e-com.png"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">E-commerce Project</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/Leelakrishna93/Ecom.git'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://leelakrishna90.pythonanywhere.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/cv.png"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">CV-Generator Project</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/Leelakrishna93/CV-Generetor.git'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://leelakrishna7393.pythonanywhere.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/Otp.png"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">OTP Project</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/Leelakrishna93/OTP.git'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://leelakrishna7373.pythonanywhere.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-
-
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/Crud.png"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">crud Project</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/Leelakrishna93/Crud.git'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://leelakrishna9391.pythonanywhere.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-
-
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/Emotion.png"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Emotion Detection Project</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/Leelakrishna93/emotion-detection.git'"
-              >
-                Github
-              </button>
-            </div>
-          </div>
-
-        </div>
-      </div>
-      
-
-      
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
-    </section>
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="https://mailto:lethavadlaleelakrishna@gmail.com">lethavadlaleelakrishna@gmail.com</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://www.linkedin.com/in/leela-krishna-lethavadla-b0145934b">LinkedIn</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/github.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://github.com/lethavadlaLeelaKrishna/">Github</a></p>
-        </div>
-      </div>
-    </section>
-    <footer>
-      <nav>
-        <div class="nav-links-container">
+        <nav class="menu-links" id="menu-links">
           <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#profile"><span class="nav-index">00</span> Intro</a></li>
+            <li><a href="#about"><span class="nav-index">01</span> About</a></li>
+            <li><a href="#experience"><span class="nav-index">02</span> Skills</a></li>
+            <li><a href="#projects"><span class="nav-index">03</span> Work</a></li>
+            <li><a href="#contact"><span class="nav-index">04</span> Contact</a></li>
           </ul>
-        </div>
-      </nav>
+
+          <div class="site-nav__footer">
+            <div id="socials-container">
+              <img
+                src="./assets/linkedin.png"
+                alt="LinkedIn profile"
+                class="icon"
+                onclick="location.href='https://www.linkedin.com/in/leela-krishna-lethavadla-b0145934b'"
+              />
+              <img
+                src="./assets/github.png"
+                alt="Github profile"
+                class="icon"
+                onclick="location.href='https://github.com/lethavadlaLeelaKrishna/'"
+              />
+            </div>
+            <p class="site-nav__caption">Based in India<br />Open to remote work</p>
+          </div>
+        </nav>
+      </header>
+
+      <main>
+        <section id="profile">
+          <div class="profile__frame">
+            <div class="profile__blob" aria-hidden="true"></div>
+            <img src="./assets/profile-pic.png" alt="Portrait of Lethavadla Leela Krishna" />
+          </div>
+          <div class="section__text">
+            <p class="eyebrow">$ whoami</p>
+            <h1 class="title title--hero">
+              Lethavadla<br /><em>Leela Krishna</em>
+            </h1>
+            <p class="role-line"><span id="typed-role"></span></p>
+            <p class="hero-summary">
+              I build scalable web applications end to end — from Django
+              backends and REST APIs to the interfaces people actually touch.
+            </p>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-1"
+                onclick="window.open('./assets/resume-example.pdf')"
+              >
+                Download CV
+              </button>
+              <button
+                class="btn btn-color-2"
+                onclick="location.href='#contact'"
+              >
+                Get in touch
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section id="about">
+          <p class="eyebrow">01 / About</p>
+          <h2 class="title">Get to know me</h2>
+          <div class="about-grid">
+            <div class="about-grid__photo">
+              <img src="./assets/about-pic.png" alt="Leela Krishna working" class="about-pic" />
+            </div>
+            <div class="about-grid__body">
+              <p class="text-container">
+                I'm a passionate Python developer with hands-on experience in
+                Django, REST APIs, and database management. I enjoy building
+                scalable, user-friendly web applications that solve real
+                problems — comfortable across the stack, from CRUD-heavy
+                backends to the frontend that ships them.
+              </p>
+              <div class="stat-row">
+                <div class="stat-chip">
+                  <img src="./assets/experience.png" alt="" class="icon" />
+                  <div>
+                    <h3>1+ year</h3>
+                    <p>Full Stack Developer</p>
+                  </div>
+                </div>
+                <div class="stat-chip">
+                  <img src="./assets/education.png" alt="" class="icon" />
+                  <div>
+                    <h3>B.Tech</h3>
+                    <p>Bachelor of Technology</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="experience">
+          <p class="eyebrow">02 / Skills</p>
+          <h2 class="title">What I work with</h2>
+          <div class="skills-grid">
+            <div class="skills-col">
+              <h3 class="skills-col__title">Frontend</h3>
+              <ul class="tag-list">
+                <li class="tag">HTML5</li>
+                <li class="tag">CSS3</li>
+                <li class="tag">JavaScript</li>
+                <li class="tag">Bootstrap</li>
+                <li class="tag">React JS</li>
+              </ul>
+            </div>
+            <div class="skills-col">
+              <h3 class="skills-col__title">Backend &amp; Tools</h3>
+              <ul class="tag-list">
+                <li class="tag">Python</li>
+                <li class="tag">Django / Flask</li>
+                <li class="tag">MongoDB</li>
+                <li class="tag">SQLite3</li>
+                <li class="tag">Git &amp; Github</li>
+                <li class="tag">VS Code</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="projects">
+          <p class="eyebrow">03 / Work</p>
+          <h2 class="title">Selected projects</h2>
+          <div class="bento-grid">
+            <article class="bento-card bento-card--wide">
+              <div class="bento-card__media">
+                <img src="./assets/Todo.png" alt="Todo application project" />
+              </div>
+              <div class="bento-card__body">
+                <h3 class="project-title">Todo Project</h3>
+                <p class="project-desc">A task manager with full CRUD workflows and clean, minimal UI.</p>
+                <div class="project-links">
+                  <a href="https://github.com/Leelakrishna93/Todo">Github ↗</a>
+                  <a href="https://leelakrishna9090.pythonanywhere.com/">Live demo ↗</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="bento-card">
+              <div class="bento-card__media">
+                <img src="./assets/Empdata.png" alt="Employee data project" />
+              </div>
+              <div class="bento-card__body">
+                <h3 class="project-title">Employee Project</h3>
+                <p class="project-desc">Employee records management built on Django.</p>
+                <div class="project-links">
+                  <a href="https://github.com/Leelakrishna93/Employee.git">Github ↗</a>
+                  <a href="https://leelakrishna23.pythonanywhere.com/">Live demo ↗</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="bento-card">
+              <div class="bento-card__media">
+                <img src="./assets/e-com.png" alt="E-commerce project" />
+              </div>
+              <div class="bento-card__body">
+                <h3 class="project-title">E-commerce Project</h3>
+                <p class="project-desc">A storefront with product listing, cart, and checkout flow.</p>
+                <div class="project-links">
+                  <a href="https://github.com/Leelakrishna93/Ecom.git">Github ↗</a>
+                  <a href="https://leelakrishna90.pythonanywhere.com/">Live demo ↗</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="bento-card">
+              <div class="bento-card__media">
+                <img src="./assets/cv.png" alt="CV generator project" />
+              </div>
+              <div class="bento-card__body">
+                <h3 class="project-title">CV Generator Project</h3>
+                <p class="project-desc">Generates polished, downloadable resumes from user input.</p>
+                <div class="project-links">
+                  <a href="https://github.com/Leelakrishna93/CV-Generetor.git">Github ↗</a>
+                  <a href="https://leelakrishna7393.pythonanywhere.com/">Live demo ↗</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="bento-card">
+              <div class="bento-card__media">
+                <img src="./assets/Otp.png" alt="OTP verification project" />
+              </div>
+              <div class="bento-card__body">
+                <h3 class="project-title">OTP Project</h3>
+                <p class="project-desc">One-time-password generation and verification flow.</p>
+                <div class="project-links">
+                  <a href="https://github.com/Leelakrishna93/OTP.git">Github ↗</a>
+                  <a href="https://leelakrishna7373.pythonanywhere.com/">Live demo ↗</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="bento-card">
+              <div class="bento-card__media">
+                <img src="./assets/Crud.png" alt="CRUD application project" />
+              </div>
+              <div class="bento-card__body">
+                <h3 class="project-title">CRUD Project</h3>
+                <p class="project-desc">Create, read, update, delete — the fundamentals, done cleanly.</p>
+                <div class="project-links">
+                  <a href="https://github.com/Leelakrishna93/Crud.git">Github ↗</a>
+                  <a href="https://leelakrishna9391.pythonanywhere.com/">Live demo ↗</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="bento-card">
+              <div class="bento-card__media">
+                <img src="./assets/Emotion.png" alt="Emotion detection project" />
+              </div>
+              <div class="bento-card__body">
+                <h3 class="project-title">Emotion Detection Project</h3>
+                <p class="project-desc">Detects emotion from input using a trained model pipeline.</p>
+                <div class="project-links">
+                  <a href="https://github.com/Leelakrishna93/emotion-detection.git">Github ↗</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="contact">
+          <p class="eyebrow">04 / Contact</p>
+          <h2 class="title title--contact">Let's build<br /><em>something together</em></h2>
+          <div class="contact-grid">
+            <a href="https://mailto:lethavadlaleelakrishna@gmail.com" class="contact-email">
+              lethavadlaleelakrishna@gmail.com
+            </a>
+            <ul class="contact-list">
+              <li>
+                <img src="./assets/linkedin.png" alt="" class="icon contact-icon" />
+                <a href="https://www.linkedin.com/in/leela-krishna-lethavadla-b0145934b">LinkedIn</a>
+              </li>
+              <li>
+                <img src="./assets/github.png" alt="" class="icon contact-icon" />
+                <a href="https://github.com/lethavadlaLeelaKrishna/">Github</a>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer>
       <p>Copyright &#169; 2025 Lethavadla Leela Krishna. All Rights Reserved.</p>
+      <a href="#profile" class="back-to-top">Back to top ↑</a>
     </footer>
-      
+
+    <script src="script.js"></script>
   </body>
 </html>
